@@ -1,0 +1,9 @@
+h1,h2,h3,h4 {
+    color:#000000;
+}
+
+.hand {
+    border: solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
