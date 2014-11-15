@@ -7,3 +7,9 @@ h1,h2,h3,h4 {
     border-color: #000000;
     border-radius: 5px;
 }
+
+.rotate {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
