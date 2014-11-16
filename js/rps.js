@@ -12,7 +12,7 @@ function newRPS() {
 
  */
 function player2RPS() {
-    var randomnumber = Math.floor(Math.random() * 3) +1;
+    var randomnumber = Math.floor(Math.random() * 3) + 1;
     switch (randomnumber) {
         case 1: 
             return "rock";
@@ -32,7 +32,10 @@ function checkRPS(player1, player2) {
     if (player1 === player2) {
         /* a tie */
         return 0;
-    } else if ((player1 == "rock" && player2 == "scissors") || (player1 == "paper" && player2 == "rock") || (player1 == "scissors" && player2 == "paper")) {
+    } else if (
+        (player1 == "rock" && player2 == "scissors") || 
+        (player1 == "paper" && player2 == "rock") || 
+        (player1 == "scissors" && player2 == "paper")) {
         /* player1 won */
         return 1;
     } else {
