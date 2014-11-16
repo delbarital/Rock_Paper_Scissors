@@ -60,4 +60,43 @@ assuming player1 is a valid RPS option (“rock”, “paper” or “scissors�
 ● “Player2 won!”
 ● “Tie!”
 */
-function playRPS(player1) {}
+function playRPS(player1) {
+    switch (player1) {
+        case "rock":
+            document.getElementById("topRock").style.visibility = "visible";
+            break;
+        case "paper":
+            document.getElementById("topPaper").style.visibility = "visible";
+            break;
+        case "scissors":
+            document.getElementById("topScissors").style.visibility = "visible";
+            break;
+        default:
+            console.log("error! Wrong move was passed to playRPS()");
+    }
+    var player2 = player2RPS();
+    switch (player2) {
+        case "rock":
+            document.getElementById("buttomRock").style.visibility = "visible";
+            break;
+        case "paper":
+            document.getElementById("buttomPaper").style.visibility = "visible";
+            break;
+        case "scissors":
+            document.getElementById("buttomScissors").style.visibility = "visible";
+            break;
+        default:
+            console.log("error! Wrong move was passed to playRPS()");
+    }
+    
+    switch (checkRPS(player1, player2)) {
+        case 0:
+            document.getElementById("redText").innerHTML = "Tie";
+            break;
+        case 1:
+            document.getElementById("redText").innerHTML = "Player1 won!";
+            break;
+        case 2:
+            document.getElementById("redText").innerHTML = "Player2 won!";
+    }
+}
