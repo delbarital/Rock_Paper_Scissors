@@ -4,7 +4,7 @@ hides the red arrows
 ■ resets any additional variables
 */
 function newRPS() {
-
+    
 }
 
 /*
@@ -12,7 +12,15 @@ function newRPS() {
 
  */
 function player2RPS() {
- 
+    var randomnumber = Math.floor(Math.random() * 3) +1;
+    switch (randomnumber) {
+        case 1: 
+            return "rock";
+        case 2:
+            return "paper";
+        case 3:
+            return "scissors";
+    }
 }
 
 /*
@@ -36,4 +44,4 @@ assuming player1 is a valid RPS option (“rock”, “paper” or “scissors�
 ● “Player2 won!”
 ● “Tie!”
 */
-function playRPS(player1) {...}
+function playRPS(player1) {}
