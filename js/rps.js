@@ -29,8 +29,17 @@ function player2RPS() {
 player2 won
  */
 function checkRPS(player1, player2) {
- 
- }
+    if (player1 === player2) {
+        /* a tie */
+        return 0;
+    } else if ((player1 == "rock" && player2 == "scissors") || (player1 == "paper" && player2 == "rock") || (player1 == "scissors" && player2 == "paper")) {
+        /* player1 won */
+        return 1;
+    } else {
+        /* player2 won */
+        return 2;
+    }
+ } 
 
 /*
 
