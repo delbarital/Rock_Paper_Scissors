@@ -2,14 +2,23 @@ h1,h2,h3,h4 {
     color:#000000;
 }
 
+hand {
+    align-content: center;
+}
 .hand {
     border: solid;
     border-color: #000000;
     border-radius: 5px;
+    width: 75%;
+    align-content: center;
 }
 
 .rotate {
     -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
+}
+
+.arrow {
+    visibility:hidden;
 }
