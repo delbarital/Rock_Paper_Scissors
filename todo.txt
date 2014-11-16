@@ -1,2 +1,1 @@
 1. Remove the multiple align="center" tags.
-2. make it impossible to change the selection after the game was ended

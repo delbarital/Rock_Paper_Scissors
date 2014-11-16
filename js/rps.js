@@ -1,9 +1,12 @@
+var newGame = true;
+
 /*
 hides the red arrows
 ■ changes the red text to “GO!”
 ■ resets any additional variables
 */
 function newRPS() {
+    newGame = true;
     var arrows = document.getElementsByClassName('arrow');
     for(var i = 0; i != arrows.length; ++i){
         arrows[i].style.visibility = "hidden";
@@ -61,6 +64,10 @@ assuming player1 is a valid RPS option (“rock”, “paper” or “scissors�
 ● “Tie!”
 */
 function playRPS(player1) {
+    if (newGame != true) {
+        return;
+    }
+    newGame = false;
     switch (player1) {
         case "rock":
             document.getElementById("topRock").style.visibility = "visible";
