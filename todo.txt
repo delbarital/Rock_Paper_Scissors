@@ -1,0 +1,1 @@
+1. Remove the multiple align="center" tags.
