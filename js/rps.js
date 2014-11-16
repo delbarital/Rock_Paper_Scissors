@@ -4,7 +4,11 @@ hides the red arrows
 ■ resets any additional variables
 */
 function newRPS() {
-    
+    var arrows = document.getElementsByClassName('arrow');
+    for(var i = 0; i != arrows.length; ++i){
+        arrows[i].style.visibility = "hidden";
+    }
+    document.getElementById("redText").innerHTML = "GO!";
 }
 
 /*
@@ -14,7 +18,7 @@ function newRPS() {
 function player2RPS() {
     var randomnumber = Math.floor(Math.random() * 3) + 1;
     switch (randomnumber) {
-        case 1: 
+        case 1:
             return "rock";
         case 2:
             return "paper";
