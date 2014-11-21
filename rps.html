@@ -9,7 +9,7 @@
     </head>
     <body style="text-align:center; background-color:#3d85c6">
         <h1>Rock Paper Scissors</h1>
-        <h4 style="text-decoration: underline"> Eldan Shacher (************************), Tal Delbari (************************)</h4>
+        <h4 style="text-decoration: underline"> ********** ********** (************************), ********** ********** (************************)</h4>
         <h3 style="color:#FF0000" id="redText">GO!</h3>
         <div class="container" align="center">
             <div class="row">
@@ -79,6 +79,10 @@
                 </div>
             </div>
         </div>
+		<iframe id="stats" src="./getstats"></iframe>
+		<script type="text/javascript">
+		setInterval(function a(){document.getElementById("stats").contentDocument.location.reload();},10000);
+		</script>
         <!--Bootstrap imports-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
