@@ -1,0 +1,9 @@
+init:
+create table game_stats(type_id integer primary key, type_name text, value integer);
+insert into game_stats(type_id,type_name,value) values(1,'Player1',0);
+insert into game_stats(type_id,type_name,value) values(2,'Player2',0);
+insert into game_stats(type_id,type_name,value) values(0,'Ties',0);
+
+
+reset counters:
+update game_stats set value=0;
