@@ -19,15 +19,22 @@ function newRPS() {
 
  */
 function player2RPS() {
-    var randomnumber = Math.floor(Math.random() * 3) + 1;
-    switch (randomnumber) {
-        case 1:
-            return "rock";
-        case 2:
-            return "paper";
-        case 3:
-            return "scissors";
-    }
+	var  httpReq = null;
+	httpReq = new XMLHttpRequest();
+	httpReq.open("GET", "./player2action", false);
+	httpReq.send(null);
+	return httpReq.responseText;
+}
+
+/*
+ sends statistics to server (not temper safe but avoids changing player2RPS() requirements)
+
+ */
+function sendStats(results) {
+	var  httpReq = null;
+	httpReq = new XMLHttpRequest();
+	httpReq.open("GET", "./results?res=" + results, false);
+	httpReq.send(null);
 }
 
 /*
@@ -96,7 +103,9 @@ function playRPS(player1) {
             console.log("error! Wrong move was passed to playRPS()");
     }
     
-    switch (checkRPS(player1, player2)) {
+	var result = checkRPS(player1, player2);
+	sendStats(result);
+    switch (result) {
         case 0:
             document.getElementById("redText").innerHTML = "Tie";
             break;
